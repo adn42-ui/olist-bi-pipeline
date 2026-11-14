@@ -1,0 +1,8 @@
+# Raw Kaggle data is not redistributed with the repo
+data/raw/*.csv
+data/raw/*.zip
+*.duckdb
+*.duckdb.wal
+logs/
+__pycache__/
+.venv/

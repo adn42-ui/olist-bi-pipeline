@@ -1,0 +1,14 @@
+T-TEST: review score, on-time vs late deliveries
+  on time : n = 89,443  mean = 4.29  sd = 1.149
+  late    : n = 6,381  mean = 2.27  sd = 1.571
+  mean difference (on time - late) = 2.02  95% CI [1.981, 2.059]
+  Welch t = 100.79, df = 6875.6, p < 1e-300
+  Cohen's d = 1.709 (large)
+  Mann-Whitney U p < 1e-300 (robustness check for ordinal data)
+  1-star share: on time 6.62%, late 53.77%
+
+Interpretation: orders delivered late are rated 2.02 points lower on the
+5-point scale than orders delivered on time (2.27 vs 4.29).
+The difference is statistically significant and the effect is large
+(d = 1.709), so it is a practically important gap, not just an artefact of the
+large sample. This is an association: it does not prove lateness alone causes the low score.

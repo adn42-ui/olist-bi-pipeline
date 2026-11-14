@@ -1,0 +1,22 @@
+{
+  "test": "Welch two-sample t-test",
+  "n_on_time": 89443,
+  "n_late": 6381,
+  "mean_on_time": 4.29,
+  "mean_late": 2.27,
+  "sd_on_time": 1.149,
+  "sd_late": 1.571,
+  "mean_difference": 2.02,
+  "ci95_difference": [
+    1.981,
+    2.059
+  ],
+  "t_statistic": 100.79,
+  "degrees_of_freedom": 6875.6,
+  "p_value": 0.0,
+  "cohens_d": 1.709,
+  "effect_size_label": "large",
+  "mann_whitney_u_p_value": 0.0,
+  "pct_one_star_on_time": 6.62,
+  "pct_one_star_late": 53.77
+}

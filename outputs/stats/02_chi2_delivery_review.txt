@@ -1,0 +1,21 @@
+CHI-SQUARED: delivery status vs review rating bucket
+Observed counts:
+bucket   low (1-2)  neutral (3)  high (4-5)
+status                                     
+on time       8289         7222       73932
+late          3983          694        1704
+
+Row percentages:
+bucket   low (1-2)  neutral (3)  high (4-5)
+status                                     
+on time       9.27         8.07       82.66
+late         62.42        10.88       26.70
+
+  chi2 = 15,558.1, df = 2, p < 1e-300, n = 95,824
+  smallest expected cell count = 527.1 (assumption of >= 5 holds)
+  Cramér's V = 0.403 (medium)
+
+Interpretation: delivery status and rating bucket are not independent (p < 1e-300).
+Is it meaningful? Yes. The p-value is tiny partly because the sample is huge, but the
+effect size is medium (V = 0.403) and the practical gap is wide:
+62.42% of late orders get a low rating (1-2) against 9.27% of on-time orders.

@@ -1,0 +1,22 @@
+REGRESSION: delivery_days ~ different_state + weight_kg   (n = 96,448)
+  Intercept           7.6081   SE 0.0373   95% CI [7.5350, 7.6812]   p < 1e-300
+  different_state     7.1815   SE 0.0527   95% CI [7.0781, 7.2848]   p < 1e-300
+  weight_kg           0.1438   SE 0.0079   95% CI [0.1283, 0.1592]   p = 1.75e-74
+  R-squared = 0.1352   adjusted = 0.1352   residual SD = 8.88 days
+
+Interpretation:
+  - Baseline (same state, weight 0): 7.61 days.
+  - Shipping across state lines adds 7.18 days on average, holding weight fixed.
+  - Each extra kg adds 0.144 days (1.44 days per 10 kg).
+  - The model explains 13.5% of the variance in delivery time; a typical
+    prediction is off by about 8.88 days.
+
+Limitations:
+  - Same-state vs different-state is a crude distance proxy. Brazilian states vary
+    enormously in size, and neighbouring states are treated the same as opposite
+    ends of the country.
+  - Delivery time is right-skewed with extreme outliers, so residuals are not
+    normal. HC3 robust standard errors address unequal variance, not the skew.
+  - Important drivers are omitted: seller handling time, carrier, season,
+    remoteness of the destination. Coefficients are associations, not causal effects.
+  - Weight is the total catalogue weight of the order, not the shipped parcel weight.

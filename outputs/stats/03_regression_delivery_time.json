@@ -1,0 +1,50 @@
+{
+  "model": "OLS: delivery_days ~ different_state + weight_kg (HC3 robust SE)",
+  "n": 96448,
+  "r_squared": 0.1352,
+  "adj_r_squared": 0.1352,
+  "residual_std_days": 8.88,
+  "coefficients": {
+    "Intercept": {
+      "coefficient": 7.6081,
+      "std_error_hc3": 0.0373,
+      "ci95": [
+        7.535,
+        7.6812
+      ],
+      "p_value": 0.0
+    },
+    "different_state": {
+      "coefficient": 7.1815,
+      "std_error_hc3": 0.0527,
+      "ci95": [
+        7.0781,
+        7.2848
+      ],
+      "p_value": 0.0
+    },
+    "weight_kg": {
+      "coefficient": 0.1438,
+      "std_error_hc3": 0.0079,
+      "ci95": [
+        0.1283,
+        0.1592
+      ],
+      "p_value": 1.7491e-74
+    }
+  },
+  "share_different_state_pct": 64.15,
+  "delivery_days_same_state": {
+    "n": 34574,
+    "mean": 7.95,
+    "median": 6.55
+  },
+  "delivery_days_different_state": {
+    "n": 61874,
+    "mean": 15.13,
+    "median": 12.77
+  },
+  "weight_kg_median": 0.75,
+  "weight_kg_p99": 22.35,
+  "corr_weight_different_state": -0.001
+}
